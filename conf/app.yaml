@@ -1,0 +1,5 @@
+LoadConfig:
+    - "config"
+    - "db"
+    - "micro"
+    - "temp"

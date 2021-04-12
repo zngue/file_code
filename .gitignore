@@ -1,0 +1,9 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+vendor/
+main_test.go
+.idea/

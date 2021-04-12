@@ -1,0 +1,8 @@
+temp:
+    path: app/code
+    modepath: github.com/zngue/file_code
+    servicepath: service
+    routerpath: router
+    modelpath: model
+    controllerpath: controller
+    requestpath: request
