@@ -1,7 +1,6 @@
 package code
 
-
-var serviceTemp string=`package service
+var serviceTemp string = `package service
 
 import (
 	"{{path}}/model"
@@ -95,9 +94,9 @@ func New{{model}}Service() {{model}}ServiceInterface {
 	return new({{model}}Service)
 }
 `
-var requestTemp string="package request\nimport (\n\t\"github.com/zngue/go_helper/pkg\"\n\t\"gorm.io/gorm\"\n)\ntype {{model}}Request struct {\n\tpkg.CommonRequest\n\tID int `form:\"id\" field:\"id\" where:\"eq\" default:\"0\"`\n}\nfunc (r *{{model}}Request) Common(db *gorm.DB) *gorm.DB {\n\ttx := r.Init(db, *r)\n\treturn tx\n}"
+var requestTemp string = "package request\nimport (\n\t\"github.com/zngue/go_helper/pkg\"\n\t\"gorm.io/gorm\"\n)\ntype {{model}}Request struct {\n\tpkg.CommonRequest\n\tID int `form:\"id\" field:\"id\" where:\"eq\" default:\"0\"`\n}\nfunc (r *{{model}}Request) Common(db *gorm.DB) *gorm.DB {\n\ttx := r.Init(db, *r)\n\treturn tx\n}"
 
-var controllerTemp string=`package controller
+var controllerTemp string = `package controller
 
 import (
 	"github.com/gin-gonic/gin"
@@ -207,7 +206,7 @@ func ( *{{model}} ) Delete(ctx *gin.Context) {
 	response.HttpSuccessWithError(ctx,err,nil)
 }
 `
-var routerTemp string=`package router
+var routerTemp string = `package router
 
 import (
 	"github.com/gin-gonic/gin"
@@ -230,7 +229,7 @@ func {{model}}Router(group *gin.RouterGroup)  {
 	}
 }
 `
-var modelTemp string =`package model
+var modelTemp string = `package model
 
 
 type {{model}} struct {
@@ -238,4 +237,27 @@ type {{model}} struct {
 }
 func (m *{{model}}) TableName() string  {
 	return "{{tableName}}"
+}`
+
+var pbTemp = `syntax="proto3";
+option go_package=".;pb";
+service {{model}}Service{
+  rpc List({{model}}) returns ({{model}}ResponseList) {} //列表数据
+  rpc Add({{model}}) returns ({{model}}Response) {} //添加数据
+  rpc Detail({{model}}) returns ({{model}}Response) {} //单挑数据获取
+  rpc Edit({{model}}) returns ({{model}}Response) {}//编辑数据
+  rpc Delete({{model}}) returns ({{model}}Response) {}//删除数据
+}
+message {{model}}Response{
+  int64  Code=1;
+  string Message=2;
+  {{model}} Data=3;
+}
+message {{model}}ResponseList{
+  int64  Code=1;
+  string Message=2;
+  repeated {{model}} Data=3;
+}
+message {{model}}{
+  {{service}}
 }`
