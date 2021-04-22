@@ -7,4 +7,4 @@ temp:
     pbpath: pb
     controllerpath: controller
     requestpath: request
-    pbCode: false #是否生成pb文件
+    pbCode: true #是否生成pb文件

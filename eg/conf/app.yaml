@@ -1,3 +1,4 @@
+temp: !include  temp.yaml
 LoadConfig:
     - "config"
     - "db"

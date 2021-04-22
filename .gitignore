@@ -7,3 +7,4 @@
 vendor/
 main_test.go
 .idea/
+app

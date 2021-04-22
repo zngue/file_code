@@ -14,18 +14,17 @@ import (
 
 var temp string
 
-
-func RequestFile(SelectTableName string)  {
+func RequestFile(SelectTableName string) {
 
 	path := viper.GetString("temp.path")
 	requestpath := viper.GetString("temp.requestpath")
-	requestpath=path+"/"+requestpath
+	requestpath = path + "/" + requestpath
 	CreateMutiDir(requestpath)
-	modelFile:=requestpath+"/"+SelectTableName+".go"
-	tableModel:= new(FileNameChange).Case2Camel(SelectTableName)
-	requestModelName := tableModel+"Request"
-	temp=strings.ReplaceAll(requestTemp,"{{Request}}",requestModelName)
-	temp=strings.ReplaceAll(requestTemp,"{{model}}",tableModel)
+	modelFile := requestpath + "/" + SelectTableName + ".go"
+	tableModel := new(FileNameChange).Case2Camel(SelectTableName)
+	requestModelName := tableModel + "Request"
+	temp = strings.ReplaceAll(requestTemp, "{{Request}}", requestModelName)
+	temp = strings.ReplaceAll(temp, "{{model}}", tableModel)
 	f, _ := os.Create(modelFile)
 	f.Write([]byte(temp))
 }
