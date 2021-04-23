@@ -327,8 +327,6 @@ message {{model}}Response{
   {{model}} Data=3;
 }
 message {{model}}ResponseList{
-  int64  Code=1;
-  string Message=2;
   repeated {{model}} Data=3;
 }
 message {{model}}{
