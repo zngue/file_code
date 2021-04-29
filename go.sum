@@ -399,6 +399,8 @@ github.com/zngue/go_helper v0.0.0-20210412080843-824b2c83d0db h1:s0muPg4ehzh0ADm
 github.com/zngue/go_helper v0.0.0-20210412080843-824b2c83d0db/go.mod h1:Q1UeLhmYTi+Sz+4EFZeG91TeXv/14+WdCdWN6syRPsQ=
 github.com/zngue/go_helper v0.0.0-20210422053432-1ba4c3bb9c42 h1:jYWx4IE6/xY5sd0Hm1i8FOtYKYWqUf+hoQ9BYD5IRIY=
 github.com/zngue/go_helper v0.0.0-20210422053432-1ba4c3bb9c42/go.mod h1:Q1UeLhmYTi+Sz+4EFZeG91TeXv/14+WdCdWN6syRPsQ=
+github.com/zngue/go_helper v0.0.0-20210425070506-5ec7a29a1539 h1:l7+qcwm1Q6cJDDHazVne4vzkuMxSdwUuwXcDMuhmKvk=
+github.com/zngue/go_helper v0.0.0-20210425070506-5ec7a29a1539/go.mod h1:tMnMj4U4PCpMrHRXrAsa/x10ux6etTvA727YeAYws6E=
 go.etcd.io/bbolt v1.3.2 h1:Z/90sZLPOeCy2PwprqkFa25PdkusRzaj9P8zm/KNyvk=
 go.etcd.io/bbolt v1.3.2/go.mod h1:IbVyRI1SCnLcuJnV2u8VeU0CEYM7e686BmAb1XKL+uU=
 go.opencensus.io v0.21.0/go.mod h1:mSImk1erAIZhrmZN+AvHh14ztQfjbGwt4TtuofqLduU=

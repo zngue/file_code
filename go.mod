@@ -19,7 +19,7 @@ require (
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/spf13/viper v1.7.1
 	github.com/ugorji/go v1.2.5 // indirect
-	github.com/zngue/go_helper v0.0.0-20210422053432-1ba4c3bb9c42
+	github.com/zngue/go_helper v0.0.0-20210425070506-5ec7a29a1539
 	golang.org/x/crypto v0.0.0-20210322153248-0c34fe9e7dc2 // indirect
 	golang.org/x/sys v0.0.0-20210403161142-5e06dd20ab57 // indirect
 	golang.org/x/text v0.3.6 // indirect

@@ -42,7 +42,7 @@ func TableListAll(mysql *gorm.DB, mysqldb string) []TableList {
 *@desc
  */
 func MysqlConn() (tx *gorm.DB, dbName string) {
-	pkg.NewConfig("app", "conf", "yaml")
+	pkg.NewConfig()
 	mysql, err := pkg.NewMysql()
 	if err != nil {
 		log.Fatal(err)
